@@ -8,12 +8,14 @@ export const computeFibonacciNumber = (position: number|null, isRecursive: boole
     if (notNullPosition === 0) {
         return 0;
     }
+
     if (notNullPosition < 0) {
         return computeNegativeFibonacci(notNullPosition);
     }
 
+
     if (isRecursive) {
-        return recursiveFibonacci(position);
+        return recursiveFibonacci(notNullPosition);
     }
 
     let i = 1;

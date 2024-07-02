@@ -29,6 +29,9 @@ export const computeFibonacciNumber = (position: number|null, isRecursive: boole
     let smallFibonacciNumber = 1;
     let largeFibonacciNumber = 1;
 
+    let smallFibonacciNumber = 1;
+    let largeFibonacciNumber = 1;
+
     let currentPosition = 2;
     while (currentPosition < notNullPosition) {
         const nextFibonacciNumber = smallFibonacciNumber + largeFibonacciNumber;
@@ -36,6 +39,7 @@ export const computeFibonacciNumber = (position: number|null, isRecursive: boole
         largeFibonacciNumber = nextFibonacciNumber;
         currentPosition++;
     }
+    return largeFibonacciNumber;
     return largeFibonacciNumber;
 };
 const computeNegativeFibonacci = (position: number): number => {

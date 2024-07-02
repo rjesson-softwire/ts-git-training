@@ -8,11 +8,11 @@ export const computeFibonacciNumber = (position: number | null): number => {
         return 1;
     }
 
-    if (position === 0) {
+    if (notNullPosition === 0) {
         return 0;
     }
-    if (position < 0) {
-        return computeNegativeFibonacci(position);
+    if (notNullPosition < 0) {
+        return computeNegativeFibonacci(notNullPosition);
     }
 
     let i = 1;
@@ -37,11 +37,3 @@ const computeNegativeFibonacci = (position: number): number => {
     return resultIsNegative ? absoluteResult * -1 : absoluteResult;
 }
 
-const computeNegativeFibonacci = (position: number): number => {
-    if (position >= 0) {
-        throw new Error(`Position must be less than zero! Received: ${position}.`);
-    }
-    const resultIsNegative = position % 2 === 0;
-    const absoluteResult = computeFibonacciNumber(-position);
-    return resultIsNegative ? absoluteResult * -1 : absoluteResult;
-}
